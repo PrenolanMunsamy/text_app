@@ -17,7 +17,9 @@ The system is designed to:
 * **Redis** broker
 * **Docker Compose** to orchestrate web, worker, and Redis
 * Non-blocking UI: multiple users can submit simultaneously
-
+* NLP models
+* - Topic model: https://router.huggingface.co/hf-inference/models/facebook/bart-large-mnli
+* - Sentiment model: https://router.huggingface.co/hf-inference/models/cardiffnlp/twitter-roberta-base-sentiment-latest
 ---
 
 ## 📁 Project Structure
