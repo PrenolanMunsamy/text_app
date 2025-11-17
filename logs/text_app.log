@@ -1,0 +1,9 @@
+2025-11-17 21:51:02,401 - text_app_logger - INFO - Logger initialized, logs directory: logs
+2025-11-17 21:51:02,404 - text_app_logger - INFO - Results directory set to: results
+2025-11-17 21:51:02,408 - text_app_logger - INFO - Starting Flask app
+2025-11-17 21:51:03,231 - text_app_logger - INFO - Logger initialized, logs directory: logs
+2025-11-17 21:51:03,234 - text_app_logger - INFO - Results directory set to: results
+2025-11-17 21:51:03,238 - text_app_logger - INFO - Starting Flask app
+2025-11-17 21:51:29,205 - text_app_logger - INFO - Home page requested
+2025-11-17 21:51:38,224 - text_app_logger - INFO - Received batch 1763416298223507 from prenolan.munsamy@kantar.com, 15 rows
+2025-11-17 21:51:38,350 - text_app_logger - INFO - Batch 1763416298223507 queued for processing
