@@ -1,0 +1,7 @@
+huggingface-hub
+pandas
+python-dotenv
+requests
+celery
+flask
+redis
