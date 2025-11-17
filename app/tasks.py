@@ -1,6 +1,6 @@
 from celery import Celery, chord
-from models import classify_topic, analyze_sentiment
-from email_utils import send_email
+from app.models import classify_topic, analyze_sentiment
+from app.email_utils import send_email
 import os
 import pandas as pd
 

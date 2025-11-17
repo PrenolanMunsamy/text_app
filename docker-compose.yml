@@ -13,7 +13,7 @@ services:
       - "5000:5000"
     depends_on:
       - redis
-    command: python app.py
+    command: python -m app.app
 
   worker:
     build: .
@@ -21,4 +21,4 @@ services:
     env_file: ./app/.env
     depends_on:
       - redis
-    command: celery -A tasks.app worker --loglevel=info
+    command: celery -A app.tasks worker --loglevel=info

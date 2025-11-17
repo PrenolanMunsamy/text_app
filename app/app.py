@@ -1,13 +1,15 @@
 from flask import Flask, request, jsonify, send_file
 import pandas as pd
 import os
-from tasks import process_batch_and_email
+from app.tasks import process_batch_and_email
 from celery.result import AsyncResult
 
 app = Flask(__name__)
 
 # Temporary storage for results
-RESULTS_DIR = "results"
+#RESULTS_DIR = "results"
+#os.makedirs(RESULTS_DIR, exist_ok=True)
+RESULTS_DIR = os.environ.get("RESULTS_DIR", "results")
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
 # === HTML form page ===
@@ -51,10 +53,11 @@ def upload():
 # === Download CSV ===
 @app.route("/download/<batch_id>", methods=["GET"])
 def download(batch_id):
-    file_path = os.path.join("results", f"{batch_id}.csv")
+    file_path = os.path.join(RESULTS_DIR, f"{batch_id}.csv")  # use RESULTS_DIR
     if not os.path.exists(file_path):
         return "File not found", 404
     return send_file(file_path, as_attachment=True)
+
 
 # === Check task result (JSON) ===
 @app.route("/result/<task_id>", methods=["GET"])

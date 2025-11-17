@@ -1,0 +1,12 @@
+# Core app dependencies
+flask
+pandas
+celery
+redis
+requests
+python-dotenv
+huggingface-hub
+
+# Testing / development
+pytest
+pytest-cov          # optional, for test coverage
