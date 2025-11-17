@@ -49,4 +49,4 @@ def send_email(recipient, subject, body, attachment_path=None):
 
     except Exception as e:
         print(f"❌ Email failed: {str(e)}")
-        return False
+        raise
