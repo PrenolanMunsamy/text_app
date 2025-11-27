@@ -29,7 +29,9 @@ project/
 │
 ├── docker-compose.yml
 ├── Dockerfile
-│
+├── tests
+├── logs
+├── results
 └── app/
     ├── app.py
     ├── tasks.py
